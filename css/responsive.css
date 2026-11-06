@@ -1,0 +1,312 @@
+
+/* responsive.css — responsive layouts */
+
+
+/* ========================================
+   Medium screens: tablets and small laptops
+======================================== */
+
+@media (max-width: 900px) {
+
+    /* Reduce the page's horizontal margins */
+    .wrap {
+        width: min(var(--wrap), calc(100% - 3rem));
+    }
+
+    /* Adjust the header spacing */
+    .header {
+        padding: 1.25rem 1.5rem;
+    }
+
+    .header nav {
+        gap: 1.25rem;
+    }
+
+    /* Keep the hero in two columns, with less spacing */
+    .hero {
+        grid-template-columns: 1fr .9fr;
+        gap: 2rem;
+        padding-block: 3.5rem;
+    }
+
+    .hero-art {
+        min-height: 360px;
+    }
+
+    /* Reduce spacing in the lower sections */
+    .about-section {
+        gap: 2.5rem;
+    }
+
+    .contact-panel {
+        gap: 2.5rem;
+        padding: 2.5rem;
+    }
+}
+
+
+/* ========================================
+   Small screens: tablets and phones
+======================================== */
+
+@media (max-width: 720px) {
+
+    .wrap {
+        width: calc(100% - 2.5rem);
+    }
+
+
+    /* Header */
+
+    .header {
+        flex-wrap: wrap;
+        padding: 1rem 1.25rem;
+        gap: 1rem;
+    }
+
+    .identity {
+        order: 1;
+    }
+
+    .language {
+        order: 2;
+    }
+
+    .header nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1.3rem;
+        padding-top: .4rem;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding-block: 3rem;
+    }
+
+    .hero-art {
+        min-height: 340px;
+    }
+
+
+    /* Projects heading */
+
+    .section-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    /* Keep two project cards per row on medium screens */
+    .projects {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+
+    /* About */
+
+    .about-section {
+        grid-template-columns: 1fr;
+        gap: 1.8rem;
+        padding-block: 4.5rem;
+    }
+
+
+    /* Contact */
+
+    .contact-panel {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+
+/* ========================================
+   Very small screens: mobile phones
+======================================== */
+
+@media (max-width: 520px) {
+
+    .wrap {
+        width: calc(100% - 2rem);
+    }
+
+
+    /* Typography */
+
+    h1 {
+        font-size: clamp(2.6rem, 10vw, 3.5rem);
+        line-height: 1.2;
+        margin-bottom: 1.3rem;
+    }
+
+    html[dir="rtl"] h1 {
+        line-height: 1.3;
+    }
+
+    h2 {
+        font-size: clamp(1.9rem, 7.5vw, 2.6rem);
+        line-height: 1.3;
+    }
+
+    html[dir="rtl"] h2 {
+        line-height: 1.4;
+    }
+
+
+    /* Header */
+
+    .header {
+        padding: .9rem 1rem;
+    }
+
+    .header nav {
+        gap: .8rem;
+        font-size: .85rem;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        padding-block: 2.4rem 2rem;
+    }
+
+    .intro {
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+
+    .hero-art {
+        min-height: 270px;
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+
+    .art-label,
+    .art-bottom {
+        font-size: .65rem;
+    }
+
+    .hero-tools {
+        gap: .7rem 1rem;
+        margin-top: 1.5rem;
+        font-size: .78rem;
+    }
+
+
+    /* Decorative strip */
+
+    .discipline-strip {
+        justify-content: flex-start;
+        gap: 1.5rem;
+        padding: 1rem;
+        font-size: .85rem;
+    }
+
+
+    /* Projects */
+
+    .work-section {
+        padding-block: 3.5rem;
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .project-cover {
+        min-height: 210px;
+    }
+
+    .project-info {
+        padding: 1.2rem;
+    }
+
+    .filter-group {
+        gap: .5rem;
+    }
+
+    .filter-button {
+        padding: .5rem .8rem;
+        font-size: .8rem;
+    }
+
+
+    /* About */
+
+    .about-section {
+        padding-block: 3.5rem;
+    }
+
+    .about-description {
+        font-size: .95rem;
+    }
+
+
+    /* Contact */
+
+    .contact-section {
+        padding-block: 3.5rem 4rem;
+    }
+
+    .contact-panel {
+        padding: 1.25rem;
+        gap: 1.5rem;
+        border-radius: 1rem;
+    }
+
+    .contact-description {
+        font-size: .93rem;
+    }
+
+    .contact-method {
+        padding: 1.1rem;
+    }
+}
+
+
+/* Footer responsive layout */
+
+@media (max-width: 520px) {
+
+    .footer-main {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .6rem;
+    }
+
+        /* Project dialog on small screens */
+
+    .project-dialog {
+        width: calc(100% - 1rem);
+        max-height: 90vh;
+        border-radius: .8rem;
+    }
+
+    .project-dialog-cover {
+        min-height: 170px;
+        padding: 1.25rem;
+    }
+
+    .project-dialog-body {
+        padding: 1.1rem;
+    }
+
+    .project-dialog-title {
+        font-size: 1.5rem;
+    }
+}

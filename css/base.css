@@ -1,0 +1,98 @@
+
+/* base.css — page defaults and shared rules */
+
+/* 1. Make element dimensions predictable */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Global page settings */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+/* 3. The main page */
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+/* 4. Remove default top margins */
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+}
+
+/* 5. Main heading */
+h1 {
+  font-size: clamp(3.5rem, 6.1vw, 5.6rem);
+  line-height: 1.2;
+  letter-spacing: -0.045em;
+  margin-bottom: 1.8rem;
+  font-weight: 800;
+}
+
+/* 6. Section headings */
+h2 {
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  line-height: 1.17;
+  letter-spacing: -0.04em;
+  margin-bottom: 0;
+}
+
+/* 7. Preserve comfortable Arabic typography */
+html[dir="rtl"] h1,
+html[dir="rtl"] h2 {
+  letter-spacing: 0;
+  line-height: 1.35;
+}
+
+/* 8. Links */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 9. Buttons */
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+/* 10. Remove tap highlight on interactive elements */
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* 11. Keyboard focus indicator */
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 5px;
+}
+
+/* 12. Shared content width */
+.wrap {
+  width: min(var(--wrap), calc(100% - 5rem));
+  margin-inline: auto;
+}
+
+/* 13. Reusable helper classes */
+.accent {
+  color: var(--accent);
+}
+
+.multiline {
+  white-space: pre-line;
+}

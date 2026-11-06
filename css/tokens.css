@@ -1,0 +1,39 @@
+
+/* tokens.css — shared design values */
+
+:root {
+  color-scheme: dark;
+
+  /* Backgrounds */
+  --bg: #111318;
+  --panel: #191c23;
+  --art-bg: #13151b;
+
+  /* Text */
+  --text: #f5f5f3;
+  --text-soft: #d0d3da;
+  --muted: #b0b4bd;
+  --art-text: #e7eaff;
+
+  /* Borders */
+  --line: #32363e;
+  --line-strong: #51555e;
+  --line-hover: #a0a6b4;
+  --art-border: #363e58;
+  --dialog-border: #555b69;
+  --cover-border: #ffffff1a;
+
+  /* Accent colors */
+  --accent: #c9f06b;
+  --accent-hover: #dbff93;
+  --on-accent: #15200a;
+
+  /* Shadows and overlays */
+  --backdrop: #07090dcc;
+  --shadow-dialog: 0 30px 90px #0009;
+  --shadow-text: 0 1px 4px #000;
+
+  /* Typography and sizing */
+  --font: Arial, Tahoma, sans-serif;
+  --wrap: 1200px;
+}

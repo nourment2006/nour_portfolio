@@ -1,0 +1,280 @@
+/* layout.css --> main page layout */
+/* skip link for keyboard users */
+
+.skip {
+    position: fixed;
+    top: -100px;
+    left: 1rem;
+    background: var(--accent);
+    color: var(--on-accent);
+    padding: .75rem;
+    z-index: 10;
+}
+.skip:focus {
+    top: 1rem;
+}
+
+/*Header */
+.header {
+    max-width: 1440px;
+    margin: auto;
+    padding: 1.5rem 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.25rem;
+    border-bottom: 1px solid var(--line);
+}
+
+.identity {
+    display: flex;
+    gap: .85rem;
+    align-items: center;
+    direction: ltr;
+    font-size: .86rem;
+    letter-spacing: .06rem; /*.065em ملااااحظة*/
+    font-weight: 700;
+}
+
+.mark {
+    font-size: 2.1rem;
+    font-weight: 900;
+    letter-spacing: -.12em; /* noteeeeeeeeeeeeee*/
+    color: var(--accent);
+}
+
+.identity-sub {
+    display: block;
+    color: var(--muted);
+    font-weight: 400;
+    font-size: .8rem;
+    letter-spacing: 0;
+}
+.header nav {
+    display: flex;
+    gap: 2rem;
+    font-size: .92rem;
+}
+
+.header nav a:hover {
+color: var(--accent);
+}
+
+/*hero section */
+.hero {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    padding-block: 4.5rem 4rem;
+}
+
+.intro {
+    color: var(--muted);
+    max-width: 32rem;
+    font-size: 1.12rem;
+    line-height: 1.9;
+    margin-bottom: 1.8rem;
+}
+
+.hero-tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    margin-top: 2.2rem;
+    color: var(--muted);
+    font-size: .875rem;
+    direction: ltr;
+}
+
+/*hero image container*/
+.hero-art {
+    min-height: 420px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: var(--art-bg);
+    border: 1px solid var(--art-border);
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    overflow: hidden;
+    direction: ltr
+}
+
+
+.hero-art img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.art-label,
+.art-bottom {
+    display: flex;
+    justify-content: space-between;
+    font-size: .75rem;
+    letter-spacing: .1em;
+    color: var(--art-text);
+    text-shadow: var(--shadow-text);
+    z-index: 1;
+}
+
+.discipline-strip {
+    display: flex;
+    gap: 3.2rem;
+    justify-content: center;
+    align-items: center;
+    border-block: 1px solid var(--line);
+    padding: 1.3rem 1rem;
+    font-size: clamp(.9rem, 2vw, 1.4rem);
+    letter-spacing: .05em;
+    color: var(--text-soft);
+    overflow: hidden;
+    direction: ltr;
+    white-space: nowrap;
+}
+
+.star {
+    color: var(--accent);
+    font-size: 1.7rem;
+}
+
+/*projects section*/
+.work-section {
+    padding-block: 5rem;
+}
+
+.section-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: end;
+    margin-bottom: 2.1rem;
+}
+
+.section-note {
+    max-width: 22rem;
+    color: var(--muted);
+    font-size: 1rem;
+    margin: 0;
+    line-height: 1.8;
+}
+
+/* Temporary message until projects are rendered */
+.projects-placeholder {
+    color: var(--muted);
+    border: 1px dashed var(--line);
+    padding: 1.5rem;
+    margin: 0;
+    text-align: center;
+}
+
+
+/* Projects grid */
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+
+/* About section */
+
+.about-section {
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap: 4rem;
+    align-items: start;
+    padding-block: 6rem;
+    border-top: 1px solid var(--line);
+}
+
+.about-heading h2 {
+    max-width: 15ch;
+}
+
+.about-content {
+    max-width: 36rem;
+}
+
+.about-description {
+    color: var(--text-soft);
+    font-size: 1.05rem;
+    line-height: 2;
+    margin: 0 0 2rem;
+}
+
+.about-fields {
+    margin-top: 2rem;
+}
+
+.about-fields h3 {
+    font-size: .95rem;
+    color: var(--text);
+    margin-bottom: 1rem;
+}
+
+
+
+/* Contact section */
+
+.contact-section {
+    padding-block: 5rem 7rem;
+    border-top: 1px solid var(--line);
+}
+
+.contact-panel {
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    gap: 4rem;
+    align-items: center;
+    padding: 3.5rem;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 1.5rem;
+}
+
+.contact-copy {
+    max-width: 38rem;
+}
+
+
+
+/* Footer layout */
+
+.footer {
+    border-top: 1px solid var(--line);
+}
+
+.footer-inner {
+    padding-block: 2.5rem 1.5rem;
+}
+
+.footer-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--line);
+}
+
+.footer-bottom p {
+    margin: 0;
+}
